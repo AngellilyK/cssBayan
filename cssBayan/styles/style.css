@@ -1,0 +1,94 @@
+body{
+ margin:0;
+ background-color:rgb(255, 243, 228);
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 60%;
+}
+
+h1{
+    margin: 10px 0;
+}
+
+.accordion-item{
+    border-radius: .4rem;
+}
+  
+.accordion-item hr{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+  
+.accordion-link{
+    font-size: 1.6rem;
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #000000;
+}
+  
+.accordion-link h3{
+    font-weight:500;
+    font-size: 20px;
+}
+  
+.answer{
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+
+.arrow{
+    width: 30px;
+    height: 30px;
+    transition: 0.8s;
+    opacity: 0;
+}
+
+.container:hover .arrow{
+    opacity: 1;
+}
+
+.first-question{
+    max-height: 20rem;   
+}
+
+.accordion:has(.accordion-item:target) .first-question{
+    max-height: 0;
+}
+
+.container .accordion .accordion-item:target .answer{
+    max-height: 20rem;
+}
+
+.accordion-item:hover .answer{
+    max-height: 20rem;
+}
+
+.accordion-item:hover h3{
+    color: blueviolet;
+}
+  
+.accordion-item:target .accordion-link .arrow{
+    transform: rotate(0);
+    transition: 0.8s;
+}
+  
+.accordion-item:target .accordion-link .arrow{
+    transform: rotate(180deg);
+    transition: 0.8s;
+}
+  
+.accordion-item:hover .accordion-link .arrow{
+    transform: rotate(180deg);
+}
