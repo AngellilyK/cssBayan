@@ -61,14 +61,6 @@ hr{
     opacity: 0;
 }
 
-.container:hover .arrow{
-    opacity: 1;
-}
-
-.accordion:hover{
-    cursor: pointer;
-}
-
 .first-question{
     max-height: 20rem;   
 }
@@ -107,6 +99,24 @@ hr{
     transform: rotate(180deg);
 }
 
-.answer:hover{
-    transform:scale(1.05);
+
+
+@media (hover: none) {
+    .arrow{
+        opacity: 1;
+    }
+}
+
+@media (hover: hover) {
+    .answer:hover{
+        transform:scale(1.05);
+    }
+    
+    .container:hover .arrow{
+        opacity: 1;
+    }
+
+    .accordion:hover{
+        cursor: pointer;
+    }
 }
