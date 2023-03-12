@@ -25,6 +25,12 @@ h3{
     font-size: 2rem;
 }
 
+img{
+    width:50%;
+    object-fit: cover;
+    margin: 10px 0;
+}
+
 .accordion-item{
     border-radius: .4rem;
 }
@@ -52,6 +58,7 @@ hr{
     max-height: 0;
     overflow: hidden;
     transition: 1s;
+    text-align: center;
 }
 
 .arrow{
@@ -62,7 +69,7 @@ hr{
 }
 
 .first-question{
-    max-height: 20rem;   
+    max-height: 40rem;   
 }
 
 .accordion:has(.accordion-item:target) .first-question{
@@ -70,11 +77,11 @@ hr{
 }
 
 .container .accordion .accordion-item:target .answer{
-    max-height: 20rem;
+    max-height: 40rem;
 }
 
-.accordion-item:hover .answer{
-    max-height: 20rem;
+.accordion-item:hover a:nth-child(2) .answer{
+    max-height: 40rem;
 }
 
 .accordion-item:hover h3{
@@ -109,7 +116,7 @@ hr{
 
 @media (hover: hover) {
     .answer:hover{
-        transform:scale(1.05);
+        transform:scale(1.02);
     }
     
     .container:hover .arrow{
