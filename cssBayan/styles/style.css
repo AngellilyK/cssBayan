@@ -8,7 +8,7 @@ section {
     height: 100vh;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 3.125rem;
 }
 
 .container{
@@ -16,18 +16,18 @@ section {
 }
 
 h1{
-    margin: 10px 0;
+    margin: 0.625rem 0;
     font-size: 3rem;
 }
 
 h3{
-    margin: 5px 0;
+    margin: 0.3125rem 0;
 }
 
 .image-meme{
     width:50%;
     object-fit: cover;
-    margin: 10px 0;
+    margin: 0.625rem 0;
 }
 
 .accordion-item{
@@ -35,7 +35,7 @@ h3{
 }
   
 hr{
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    border: 0.0625rem solid rgba(0, 0, 0, 0.2);
 }
   
 .accordion-link{
@@ -60,8 +60,8 @@ hr{
 }
 
 .arrow{
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     transition: 0.8s;
     opacity: 0;
 }
@@ -78,14 +78,6 @@ hr{
     max-height: 40rem;
 }
 
-.accordion-item:hover a:nth-child(2) .answer{
-    max-height: 40rem;
-}
-
-.accordion-item:hover h3{
-    color: rgb(226, 43, 125);
-}
-
 .accordion-item:target h3{
     color: rgb(191, 0, 0);
 }
@@ -100,11 +92,6 @@ hr{
     transition: 0.8s;
 }
   
-.accordion-item:hover .accordion-link .arrow{
-    transform: rotate(180deg);
-}
-
-
 
 @media (hover: none) {
     .arrow{
@@ -124,6 +111,18 @@ hr{
     .accordion:hover{
         cursor: pointer;
     }
+
+    .accordion-item:hover a:nth-child(2) .answer{
+        max-height: 40rem;
+    }
+    
+    .accordion-item:hover h3{
+        color: rgb(226, 43, 125);
+    }
+
+    .accordion-item:hover .accordion-link .arrow{
+        transform: rotate(180deg);
+    }
 }
 
 @media (min-width: 1920px){
@@ -135,14 +134,18 @@ hr{
     }
 
     .arrow{
-        width: 50px;
-        height: 50px;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    hr{
+        border-width: 0.05rem;
     }
 }
 
 @media (max-width: 820px){
     html{
-        font-size: 16px;
+        font-size: 14px;
     }
     .container{
         width: 80%;
@@ -150,6 +153,10 @@ hr{
 
     .image-meme{
         width: 70%;
+    }
+
+    hr{
+        border-width: 0.0714rem
     }
 }
 
@@ -166,7 +173,11 @@ hr{
     }
 
     .arrow{
-        width: 15px;
-        height: 15px;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    hr{
+        border-width: 0.1rem;
     }
 }
